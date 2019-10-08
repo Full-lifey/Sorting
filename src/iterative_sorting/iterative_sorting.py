@@ -37,8 +37,6 @@ def bubble_sort(arr):
                 # if arr[cur_index] is larger, swap positions
                 larger_item = arr.pop(i)
                 arr.insert(i+1, larger_item)
-                print(arr)
-        print('swap counter', swap_counter)
     # loop until one full pass is completed with swap counter = 0
     return arr
 
