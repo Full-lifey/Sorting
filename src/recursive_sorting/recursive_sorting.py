@@ -34,8 +34,6 @@ def merge_sort(arr):
         # Feed arrays into merge function until only one remains
         left = merge_sort(arr[:mid])
         right = merge_sort(arr[mid:])
-        print('left', left)
-        print('right', right)
         # Merge arrays back together
         return merge(left, right)
     return arr
