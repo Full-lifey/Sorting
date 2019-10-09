@@ -8,9 +8,11 @@ def merge(arrA, arrB):
         # If arrA or arrB are out of values?
         if len(arrA) == 0:
             merged_arr += arrB
+            # Return the array now so the iterator stops
             return merged_arr
         elif len(arrB) == 0:
             merged_arr += arrA
+            # Return the array now so the iterator stops
             return merged_arr
         else:
             # Compare first elements of arrA and arrB
@@ -57,13 +59,3 @@ def merge_sort_in_place(arr, l, r):
 def timsort(arr):
 
     return arr
-
-
-def arr_split(arr2):
-    if len(arr2) == 1:
-        return arr2
-    mid = len(arr) // 2
-    left = merge_sort(arr2[:mid])
-    right = merge_sort(arr2[mid:])
-    # return [left, right]
-    return merge(left, right)
